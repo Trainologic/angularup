@@ -1,0 +1,32 @@
+$progress-width: 200px;
+$progress-height: 20px;
+
+@keyframes running {
+    0%   {left: 0;}
+    50%  {left: $progress-width - $progress-height;}
+    100%   {left: 0;}
+}
+
+.progress-cont {
+    position: relative;
+    width: $progress-width;
+    height: $progress-height;
+    background-color: rgb(200, 200, 200);
+    margin-top: 1em;
+
+    .progress {
+        position: absolute;
+        width: $progress-height;
+        height: 100%;
+        background-color: blue;
+        animation-name: running;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
